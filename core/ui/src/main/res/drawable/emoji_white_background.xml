@@ -5,13 +5,10 @@
     <size
         android:width="100dp"
         android:height="100dp" />
-    <!--
-    android:endColor="@color/signal_light_colorTransparent2"
-    -->
     <gradient
         android:startColor="@color/signal_light_colorSurface2"
         android:centerColor="@color/signal_light_colorSurface2"
-        android:endColor="#ff00ff"
+        android:endColor="@color/signal_light_colorTransparent2"
         android:type="radial"
         android:gradientRadius="50dp" />
 </shape>
