@@ -10,7 +10,9 @@ import org.signal.core.util.StringUtil;
 import org.signal.emoji.parsing.EmojiParser;
 import org.signal.core.util.Util;
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
@@ -95,4 +97,21 @@ public final class EmojiUtil {
 
     return text.replaceAll(EMOJI_REGEX, "");
   }
+
+  public static boolean isEmojiInNeedOfWhiteBackground(@NonNull Context context, @Nullable String emoji) {
+    if (Util.isEmpty(emoji)) {
+      return false;
+    }
+
+    // Strip modifiers
+    String emojiNormalized = emoji;
+    int[] codePoints = emoji.codePoints().toArray();
+    if (codePoints.length > 1 && codePoints[codePoints.length - 1] == 0xfe0f) {
+      emojiNormalized = new String(codePoints, 0, codePoints.length - 1);
+    }
+
+    List<String> darkEmojis = Arrays.asList(context.getResources().getStringArray(R.array.dark_emojis_in_need_of_white_background));
+    return darkEmojis.contains(emojiNormalized);
+  }
+
 }
