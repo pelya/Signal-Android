@@ -12,7 +12,6 @@ import androidx.appcompat.widget.AppCompatImageView;
 
 import org.thoughtcrime.securesms.R;
 import org.signal.emoji.EmojiProvider;
-
 import org.signal.emoji.EmojiUtil;
 
 public class EmojiImageView extends AppCompatImageView {
@@ -44,10 +43,6 @@ public class EmojiImageView extends AppCompatImageView {
             getResources().getDrawable(R.drawable.emoji_white_background, getContext().getTheme()),
             EmojiProvider.getEmojiDrawable(getContext(), emoji, forceJumboEmoji)
         });
-
-        emojiWithBackground.setLayerInset(0, 0, 0, 0, 0);
-        emojiWithBackground.setLayerInset(1, 0, 0, 0, 0);
-
         setImageDrawable(emojiWithBackground);
       } else {
         setImageDrawable(EmojiProvider.getEmojiDrawable(getContext(), emoji, forceJumboEmoji));

@@ -1,6 +1,7 @@
 package org.thoughtcrime.securesms.components.emoji;
 
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
@@ -17,6 +18,7 @@ import org.thoughtcrime.securesms.util.adapter.mapping.MappingViewHolder;
 import org.signal.emoji.Emoji;
 import org.signal.emoji.EmojiEventListener;
 import org.signal.emoji.EmojiProvider;
+import org.signal.emoji.EmojiUtil;
 
 public class EmojiPageViewGridAdapter extends MappingAdapter implements PopupWindow.OnDismissListener {
 
@@ -147,7 +149,16 @@ public class EmojiPageViewGridAdapter extends MappingAdapter implements PopupWin
       imageView.setContentDescription(model.emoji.getValue());
       if (drawable != null) {
         imageView.setVisibility(View.VISIBLE);
-        imageView.setImageDrawable(drawable);
+
+        if (EmojiUtil.isEmojiInNeedOfWhiteBackground(imageView.getContext(), model.emoji.getValue())) {
+          LayerDrawable emojiWithBackground = new LayerDrawable(new Drawable[] {
+              imageView.getResources().getDrawable(R.drawable.emoji_white_background, imageView.getContext().getTheme()),
+              drawable
+          });
+          imageView.setImageDrawable(emojiWithBackground);
+        } else {
+          imageView.setImageDrawable(drawable);
+        }
       }
 
       itemView.setOnClickListener(v -> {
