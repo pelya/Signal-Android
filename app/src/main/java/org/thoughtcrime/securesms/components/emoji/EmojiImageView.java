@@ -40,7 +40,7 @@ public class EmojiImageView extends AppCompatImageView {
       setContentDescription(emoji);
       if (EmojiUtil.isEmojiInNeedOfWhiteBackground(getContext(), emoji.toString())) {
         LayerDrawable emojiWithBackground = new LayerDrawable(new Drawable[] {
-            getResources().getDrawable(R.drawable.emoji_white_background, getContext().getTheme()),
+            getResources().getDrawable(org.signal.core.ui.R.drawable.emoji_white_background, getContext().getTheme()),
             EmojiProvider.getEmojiDrawable(getContext(), emoji, forceJumboEmoji)
         });
         setImageDrawable(emojiWithBackground);

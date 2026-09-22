@@ -1,6 +1,7 @@
 package org.signal.emoji;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 
 import androidx.annotation.NonNull;
@@ -103,15 +104,11 @@ public final class EmojiUtil {
       return false;
     }
 
-    // Strip modifiers
-    String emojiNormalized = emoji;
-    int[] codePoints = emoji.codePoints().toArray();
-    if (codePoints.length > 1 && codePoints[codePoints.length - 1] == 0xfe0f) {
-      emojiNormalized = new String(codePoints, 0, codePoints.length - 1);
+    if ((context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) != Configuration.UI_MODE_NIGHT_YES) {
+      return false;
     }
 
     List<String> darkEmojis = Arrays.asList(context.getResources().getStringArray(R.array.dark_emojis_in_need_of_white_background));
-    return darkEmojis.contains(emojiNormalized);
+    return darkEmojis.contains(emoji);
   }
-
 }

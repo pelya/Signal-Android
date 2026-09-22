@@ -152,7 +152,7 @@ public class EmojiPageViewGridAdapter extends MappingAdapter implements PopupWin
 
         if (EmojiUtil.isEmojiInNeedOfWhiteBackground(imageView.getContext(), model.emoji.getValue())) {
           LayerDrawable emojiWithBackground = new LayerDrawable(new Drawable[] {
-              imageView.getResources().getDrawable(R.drawable.emoji_white_background, imageView.getContext().getTheme()),
+              imageView.getResources().getDrawable(org.signal.core.ui.R.drawable.emoji_white_background, imageView.getContext().getTheme()),
               drawable
           });
           imageView.setImageDrawable(emojiWithBackground);

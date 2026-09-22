@@ -127,6 +127,10 @@ public class EmojiProvider {
     final EmojiDrawable drawable             = new EmojiDrawable(source, drawInfo, lowMemoryDecodeScale);
     final AtomicBoolean jumboLoaded          = new AtomicBoolean(false);
 
+    if (EmojiUtil.isEmojiInNeedOfWhiteBackground(context, drawInfo.getEmoji())) {
+      drawable.setBackground(context.getDrawable(org.signal.core.ui.R.drawable.emoji_white_background));
+    }
+
     EmojiPageCache.LoadResult loadResult = EmojiPageCache.INSTANCE.load(context, drawInfo.getPage(), lowMemoryDecodeScale);
 
     if (loadResult instanceof EmojiPageCache.LoadResult.Immediate) {
@@ -211,6 +215,10 @@ public class EmojiProvider {
     final EmojiSource   source               = EmojiSource.getLatest();
     final EmojiDrawable drawable             = new EmojiDrawable(source, drawInfo, lowMemoryDecodeScale);
 
+    if (EmojiUtil.isEmojiInNeedOfWhiteBackground(context, drawInfo.getEmoji())) {
+      drawable.setBackground(context.getDrawable(org.signal.core.ui.R.drawable.emoji_white_background));
+    }
+
     Bitmap bitmap = null;
 
     if (jumboEmoji && drawInfo.getJumboSheet() != null) {
@@ -265,6 +273,8 @@ public class EmojiProvider {
     private Bitmap  bmp;
     private boolean isSingleBitmap;
 
+    private Drawable background;
+
     @Override
     public int getIntrinsicWidth() {
       return (int) intrinsicWidth;
@@ -298,6 +308,11 @@ public class EmojiProvider {
         return;
       }
 
+      if (background != null) {
+        background.setBounds(getBounds());
+        background.draw(canvas);
+      }
+
       canvas.drawBitmap(bmp,
                         isSingleBitmap ? null : emojiBounds,
                         getBounds(),
@@ -316,6 +331,13 @@ public class EmojiProvider {
       this.isSingleBitmap = isSingleBitmap;
       if (bmp == null || !bmp.sameAs(bitmap)) {
         bmp = bitmap;
+        invalidateSelf();
+      }
+    }
+
+    public void setBackground(@NonNull Drawable bg) {
+      if (background == null || !background.equals(bg)) {
+        background = bg;
         invalidateSelf();
       }
     }
