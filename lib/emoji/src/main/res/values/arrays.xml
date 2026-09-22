@@ -1,51 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Edit this file using gnome-text-editor, because Android Studio renders many of these symbols as multi-character string -->   
     <string-array name="dark_emojis_in_need_of_white_background" translatable="false">
-        <item>©</item> <!-- COPYRIGHT SIGN -->
-        <item>®</item> <!-- REGISTERED SIGN -->
-        <item>🌑</item> <!-- NEW MOON SYMBOL -->
-        <item>🎥</item> <!-- MOVIE CAMERA -->
-        <item>🎧</item> <!-- HEADPHONE -->
-        <item>🎩</item> <!-- TOP HAT -->
-        <item>🎵</item> <!-- MUSICAL NOTE -->
-        <item>🎶</item> <!-- MULTIPLE MUSICAL NOTES -->
-        <item>🎼</item> <!-- MUSICAL SCORE -->
-        <item>🏴</item> <!-- WAVING BLACK FLAG -->
-        <item>🐈</item> <!-- BLACK CAT -->
-        <item>🐦</item> <!-- BLACK BIRD -->
-        <item>🐾</item> <!-- PAW PRINTS -->
-        <item>👣</item> <!-- FOOTPRINTS -->
-        <item>💣</item> <!-- BOMB -->
-        <item>💱</item> <!-- CURRENCY EXCHANGE -->
-        <item>💲</item> <!-- HEAVY DOLLAR SIGN -->
-        <item>📞</item> <!-- TELEPHONE RECEIVER -->
-        <item>🔌</item> <!-- ELECTRIC PLUG -->
-        <item>🔙</item> <!-- BACK WITH LEFTWARDS ARROW ABOVE -->
-        <item>🔚</item> <!-- END WITH LEFTWARDS ARROW ABOVE -->
-        <item>🔛</item> <!-- ON WITH EXCLAMATION MARK WITH LEFT RIGHT ARROW ABOVE -->
-        <item>🔜</item> <!-- SOON WITH RIGHTWARDS ARROW ABOVE -->
-        <item>🔝</item> <!-- TOP WITH UPWARDS ARROW ABOVE -->
-        <item>🕶</item> <!-- SUNGLASSES -->
-        <item>🕷</item> <!-- SPIDER -->
-        <item>🕸</item> <!-- SPIDER WEB -->
-        <item>🖤</item> <!-- BLACK HEART -->
-        <item>🟰</item> <!-- HEAVY EQUALS SIGN -->
-        <item>🦼</item> <!-- MOTORIZED WHEELCHAIR -->
-        <item>🦽</item> <!-- MANUAL WHEELCHAIR -->
-        <item>🩺</item> <!-- STETHOSCOPE -->
-        <item>🪮</item> <!-- HAIR PICK -->
-        <item>™</item> <!-- TRADE MARK SIGN -->
-        <item>♟</item> <!-- CHESS PAWN -->
-        <item>♠</item> <!-- BLACK SPADE SUIT -->
-        <item>♣</item> <!-- BLACK CLUB SUIT -->
-        <item>♾</item> <!-- INFINITY -->
-        <item>✔</item> <!-- HEAVY CHECK MARK -->
-        <item>✖</item> <!-- HEAVY MULTIPLICATION X -->
-        <item>➕</item> <!-- HEAVY PLUS SIGN -->
-        <item>➖</item> <!-- HEAVY MINUS SIGN -->
-        <item>➗</item> <!-- HEAVY DIVISION SIGN -->
-        <item>➰</item> <!-- CURLY LOOP -->
-        <item>➿</item> <!-- DOUBLE CURLY LOOP -->
-        <item>〰</item> <!-- WAVY DASH -->
+        <item>🖤</item>
+        <item>🗨</item>
+        <item>️👣</item>
+        <item>️🐕‍🦺</item>
+        <item>️🐈‍⬛</item>
+        <item>️🐃</item>
+        <item>️🦨</item>
+        <item>️🐾</item>
+        <item>️🦅</item>
+        <item>️🐦‍⬛</item>
+        <item>️🫍</item>
+        <item>️🐜</item>
+        <item>️🕷️</item>
+        <item>️🪄</item>
+        <item>️🎮</item>
+        <item>️🕹️</item>
+        <item>️♠️</item>
+        <item>️♣️</item>
+        <item>️♟️</item>
+        <item>️🕋</item>
+        <item>️🦽</item>
+        <item>️🦼</item>
+        <item>️🚲</item>
+        <item>️🛹</item>
+        <item>️🌑</item>
+        <item>️🕶️</item>
+        <item>️🪮</item>
+        <item>️🎩</item>
+        <item>️🎓</item>
+        <item>️🎼</item>
+        <item>️🎵</item>
+        <item>️🎶</item>
+        <item>️🔌</item>
+        <item>️🎥</item>
+        <item>️📼</item>
+        <item>️🗝️</item>
+        <item>️💣</item>
+        <item>️🔙</item>
+        <item>️🔚</item>
+        <item>️🔛</item>
+        <item>️🔜</item>
+        <item>️🔝</item>
+        <item>️✖️</item>
+        <item>️➕</item>
+        <item>️➖</item>
+        <item>️➗</item>
+        <item>️🟰</item>
+        <item>️♾️</item>
+        <item>️〰️</item>
+        <item>️💱</item>
+        <item>️💲</item>
+        <item>️✔️</item>
+        <item>️➰</item>
+        <item>️➿</item>
+        <item>️©️</item>
+        <item>️®️</item>
+        <item>️™️</item>
+        <item>️🏴</item>
+        <item>️🏴‍☠️</item>
     </string-array>
 </resources>
